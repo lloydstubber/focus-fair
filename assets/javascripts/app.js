@@ -34,8 +34,8 @@ $(window).on('load', function() {
 
             // Find middle of page and calc range either side
             var middlePage = Math.floor($(document).scrollTop() + $(window).height() / 2.0);
-            var middleTop = middlePage - 20;
-            var middleBottom = middlePage + 20;
+            var middleTop = middlePage - 10;
+            var middleBottom = middlePage + 30;
 
             // Check element within range and add class
             if( pos1 >= middleTop && pos1 <= middleBottom ) {
