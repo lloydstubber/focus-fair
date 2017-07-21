@@ -79,7 +79,13 @@ body {
                 width: 0px;
             }
 
+        #focus-logo {
+            transition: all 0.5s linear;
 
+            &.spin {
+                transform: rotate(480deg);
+            }
+        }
         #focus-logo path, #focus-logo polygon {
             fill: #ec1c24;
 

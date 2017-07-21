@@ -10,6 +10,7 @@ $(window).on('load', function() {
     function blanketFade() {
         window.setTimeout(function() {
             $('figure').addClass('shrink');
+            $('#focus-logo').addClass('spin');
         }, 500);
 
         window.setTimeout(function() {
