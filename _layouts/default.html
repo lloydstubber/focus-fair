@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+     {% include head.html %}
 
-  {% include head.html %}
+    <!-- {% include header.html %} -->
 
-  <body>
+</head>
+    <body>
+        <div class="hero-banner"></div>
+        <div class="wrapper">
+            <div class="heading-wrapper">
+                <h1 class="one">What?</h1>
+                <p>Hosted by Bloom Publishing and Hillvale, FOCUS is an annual camera and zine fair. Bringing together some of the best camera hoarders and printed matter enthusiasts Australia has to offer.
+                </p>
+            </div>
 
-    {% include header.html %}
+            <div class="heading-wrapper">
+                <h1 class="two">When &amp; where?</h1>
+                <p>FOCUS will take place on Sunday August 27th, 10 - 4pm in the Abbotsford Convent Community &amp; Linen Rooms &mdash; <a href="https://www.google.com.au/maps/place/Abbotsford+Convent/@-37.8025714,145.0022225,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad6430738fab4cd:0xdb76f953991f8b47!8m2!3d-37.8025757!4d145.0044112?hl=en" target="_blank">get directions</a>. This year we'll be asking for a gold coin donation on entry.
+                </p>
+            </div>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+            <div class="heading-wrapper">
+                <h1 class="four">Who?</h1>
+                <p>This year we've got tables from the likes of:</p>
+                <ul>
+                    <li>Perimeter Books</li>
+                    <li>Analog Cameras</li>
+                    <li>Knowledge Editions</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <p>Stay tuned</p>
+            </div>
+            <div class="heading-wrapper">
+                <h1 class="five">See you there!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error corrupti veritatis pariatur! Excepturi suscipit ea quo doloribus beatae autem minus error perspiciatis voluptatibus! Corrupti ad tenetur voluptatum, laborum iure numquam.
+                </p>
+            </div>
+    </div>
 
-    {% include footer.html %}
+     {% include footer.html %}
 
   </body>
 </html>
