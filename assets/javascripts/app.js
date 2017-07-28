@@ -9,7 +9,7 @@ $(window).on('load', function() {
 
     function blanketFade() {
         window.setTimeout(function() {
-            $('figure').addClass('shrink');
+            $('.fade-logo').addClass('shrink');
             $('#focus-logo').addClass('spin');
         }, 500);
 
