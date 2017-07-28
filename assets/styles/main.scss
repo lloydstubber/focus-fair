@@ -71,6 +71,27 @@ img {
         left: 0px;
     }
 
+    .arrow-down {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+
+            a {
+                border-bottom: none;
+                i {
+                    font-size: 34px;
+                    color: #ec1c24;
+                    animation: mover 2s infinite  alternate;
+
+                    @keyframes mover {
+                        0% { transform: translateY(0); }
+                        100% { transform: translateY(-20px); }
+                    }
+                }
+            }
+    }
+
     h1 {
         position: absolute;
         top: 75px;
@@ -114,7 +135,7 @@ img {
 
 /*==================== lAYOUT ====================*/
 
-.wrapper {
+#wrapper {
     max-width: 750px;
     margin: 0 auto 50px;
     display: flex;
