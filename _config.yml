@@ -27,3 +27,5 @@ exclude:
 sass:
   sass_dir: assets/styles/
   style: compressed
+plugins:
+- jekyll-autoprefixer
