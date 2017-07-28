@@ -70,6 +70,18 @@ img {
         top: 0px;
         left: 0px;
     }
+
+    h1 {
+        position: absolute;
+        top: 75px;
+        right: 100px;
+        color: #ec1c24;
+        margin: 0;
+        padding: 0;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        font-size: 30px;
+    }
 }
 
 #blanket {
@@ -125,16 +137,16 @@ img {
             ul {
             text-align: left;
             float: left;
-            padding-left: 30px;
-
-                &:last-of-type {
-                    margin-left: 50px;
-                }
+            padding: 15px 60px 30px;
 
                 li {
                     font-size: 21px;
                     padding-bottom: 15px;
                     list-style: circle;
+
+                    &:last-of-type {
+                        padding-bottom: 0;
+                    }
                 }
             }
         }
