@@ -434,12 +434,13 @@ h1 {
         transition: width 0.5s ease;
 
         @media (max-width:$medium-breakpoint) {
-            margin-top: 20px;
-            height: 3px;
+            margin-top: 32px;
+            height: 8px;
         }
 
         @media (max-width: $xsmall-breakpoint) {
-            font-size: 35px;
+            margin-top: 20px;
+            height: 3px;
         }
     }
 
