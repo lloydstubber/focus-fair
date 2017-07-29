@@ -228,6 +228,12 @@ img {
                     }
                 }
 
+                @media (max-width:$xsmall-breakpoint) {
+                    &:first-of-type, &:last-of-type {
+                        margin: 0 0 15px 20px;
+                    }
+                }
+
                 li {
                     font-size: 21px;
                     padding-bottom: 15px;
@@ -259,7 +265,7 @@ footer {
     margin-top: 100px;
 
     @media (max-width:$xsmall-breakpoint) {
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
 
 
@@ -413,6 +419,10 @@ h1 {
         font-size: 60px;
     }
 
+    @media (max-width: $xsmall-breakpoint) {
+        font-size: 35px;
+    }
+
     &::before {
         left: 0;
         width: 0px;
@@ -424,8 +434,12 @@ h1 {
         transition: width 0.5s ease;
 
         @media (max-width:$medium-breakpoint) {
-            margin-top: 32px;
-            height: 8px;
+            margin-top: 20px;
+            height: 3px;
+        }
+
+        @media (max-width: $xsmall-breakpoint) {
+            font-size: 35px;
         }
     }
 
