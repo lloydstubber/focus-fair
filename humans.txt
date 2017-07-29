@@ -1,0 +1,18 @@
+/* --- TEAM --- */
+Dev: Squareyes
+Location: Melbourne, Australia
+Site: https://www.squareyes.info/
+Contact: info [at] squareyes.info
+
+/* --- SITE --- */
+Last update: 01/09/2017
+Standards: HTML5, CSS3
+Components: SASS, JQuery
+Software: VS Code, Jekyll, Git
+
+        ___            ___
+     _,'   |         ,'   |
+ _,-'__  __  ______ /     |
+|    # |,--,|    # |
+|      |)  (|      |
+|______|    |______|
