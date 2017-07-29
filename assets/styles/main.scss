@@ -195,7 +195,7 @@ footer {
         hr {
             width: 100%;
             margin: 50px 0;
-            color: #eee!important;
+            border-color: #8e8e8e!important;
         }
 
         .column {
@@ -223,10 +223,11 @@ footer {
                     a {
                         color: #eee;
                         text-decoration: none;
-                        border-bottom:1px solid #eee;
+
 
                         &:hover {
                             text-decoration: none;
+                            border-bottom:1px solid #eee;
                         }
                     }
                 }
