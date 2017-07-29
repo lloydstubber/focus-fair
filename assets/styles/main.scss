@@ -257,6 +257,10 @@ footer {
 
         form {
             text-align: right;
+
+            @media (max-width:1150px) {
+                padding-top: 0;
+            }
         }
 
         label {
@@ -282,6 +286,10 @@ footer {
 
             &:hover {
                 background-color: #222725;
+            }
+
+            @media (max-width:1150px) {
+                margin-top: 10px;
             }
         }
     }
