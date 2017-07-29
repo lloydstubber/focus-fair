@@ -415,6 +415,10 @@ h1 {
     display: inline-block;
     position: relative;
 
+    &.strike.mac {
+        line-height: 1.2;
+    }
+
     @media (max-width:$medium-breakpoint) {
         font-size: 60px;
     }
