@@ -195,7 +195,7 @@ footer {
         hr {
             width: 100%;
             margin: 50px 0;
-            border-color: #8e8e8e!important;
+            border-color: #eee!important;
         }
 
         .column {
@@ -203,6 +203,7 @@ footer {
 
             &.three {
                 width: 100%;
+                text-align: center;
 
                 p {
                     color: #eee;
@@ -211,8 +212,25 @@ footer {
                 }
 
                 figure {
-                    max-width: 200px;
+                    max-width: 50px;
                     margin: auto;
+                    display: inline-block;
+
+                    &:first-of-type {
+                        padding-right: 10px;
+                    }
+
+                    &:last-of-type {
+                        padding-left: 10px;
+                    }
+
+                    svg {
+                        width: 100%;
+                        height: auto;
+                        path {
+                            fill: #eee;
+                        }
+                    }
                 }
             }
 
@@ -259,6 +277,7 @@ footer {
             border: 1px solid #eee;
             border-radius: 0px;
             color: #eee;
+            line-height: 1;
 
             &:hover {
                 background-color: #222725;
