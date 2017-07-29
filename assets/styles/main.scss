@@ -42,17 +42,31 @@ table {
 border-collapse: collapse;
 border-spacing: 0; }
 
-/*==================== CUSTOM SCSS ====================*/
+/*================== VARIABLES ==================*/
+
+// Colors
+$dark: #222725;
+$light: #eee;
+$highlight: #ec1c24;
+$blanket: #fff100;
+
+// Breakpoints
+$medium-breakpoint: 968px;
+$small-breakpoint: 650px;
+$xsmall-breakpoint: 580px;
+
+/*================== ELEMENTS ==================*/
 
 body {
-    background-color: #eee;
+    background-color: $light;
     font-family: 'Roboto', sans-serif;
-    color: #222725;
+    color: $dark;
 }
 
 img {
     width: 100%;
 }
+
 /*==================== HERO ====================*/
 
 .hero-banner {
@@ -64,11 +78,31 @@ img {
     background-repeat: no-repeat;
     position: relative;
 
+    @media (max-width: $medium-breakpoint) {
+        background-image: url('../images/hero.jpg');
+    }
+
+    @media (max-width: $small-breakpoint) {
+        background-image: url('../images/hero-mob.jpg');
+    }
+
+
     figure {
         width: 300px;
         position: absolute;
         top: 0px;
         left: 0px;
+
+        @media (max-width: $medium-breakpoint) {
+            top: -25px;
+            left: -50px;
+        }
+
+        @media (max-width: $small-breakpoint) {
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     .arrow-down {
@@ -79,9 +113,10 @@ img {
 
             a {
                 border-bottom: none;
+
                 i {
                     font-size: 34px;
-                    color: #ec1c24;
+                    color: $highlight;
                     animation: mover 2s infinite  alternate;
 
                     @keyframes mover {
@@ -96,18 +131,27 @@ img {
         position: absolute;
         top: 75px;
         right: 100px;
-        color: #ec1c24;
+        color: $highlight;
         margin: 0;
         padding: 0;
         letter-spacing: -1px;
         text-transform: uppercase;
         font-size: 30px;
+
+        @media (max-width: $medium-breakpoint) {
+            top: 52px;
+            right: 50px;
+        }
+
+        @media (max-width: $small-breakpoint) {
+            display: none;
+        }
     }
 }
 
 #blanket {
     z-index: 666;
-    background-color: #fff100;
+    background-color: $blanket;
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -132,7 +176,7 @@ img {
 }
 
 #focus-logo path, #focus-logo polygon {
-    fill: #ec1c24;
+    fill: $highlight;
 }
 
 /*==================== lAYOUT ====================*/
@@ -146,26 +190,52 @@ img {
     align-content: center;
     position: relative;
 
+    @media (max-width:$medium-breakpoint) {
+        padding: 0 20px;
+    }
+
     section {
-        background-color: #fff;
+        background-color: white;
         width: 100%;
         margin: 200px auto 0;
         text-align: center;
         z-index: 2;
 
+        @media (max-width:$medium-breakpoint) {
+            margin: 150px auto 0;
+        }
+
         .content-wrapper {
             padding: 0 60px 20px;
             z-index: 2;
 
+            @media (max-width:$small-breakpoint) {
+                padding: 0 40px 20px;
+            }
+
             ul {
-            text-align: left;
-            float: left;
-            padding: 15px 60px 30px;
+                text-align: left;
+                float: left;
+                margin: 15px 60px 30px;
+
+                @media (max-width:$medium-breakpoint) {
+                    &:first-of-type {
+                        margin: 15px 80px 30px 60px;
+                    }
+
+                    &:last-of-type {
+                        margin: 15px 0 30px;
+                    }
+                }
 
                 li {
                     font-size: 21px;
                     padding-bottom: 15px;
                     list-style: circle;
+
+                    @media (max-width:$medium-breakpoint) {
+                        font-size: 19px;
+                    }
 
                     &:last-of-type {
                         padding-bottom: 0;
@@ -183,8 +253,8 @@ img {
 }
 
 footer {
-    background-color: #222725;
-    color: #eee;
+    background-color: $dark;
+    color: $light;
     padding: 50px 0;
     margin-top: 100px;
 
@@ -197,7 +267,7 @@ footer {
         hr {
             width: 100%;
             margin: 50px 0;
-            border-color: #eee!important;
+            border-color: $light!important;
         }
 
         .column {
@@ -208,7 +278,7 @@ footer {
                 text-align: center;
 
                 p {
-                    color: #eee;
+                    color: $light;
                     font-size: 10px;
                     text-align: center;
                 }
@@ -230,7 +300,7 @@ footer {
                         width: 100%;
                         height: auto;
                         path {
-                            fill: #eee;
+                            fill: $light;
                         }
                     }
                 }
@@ -241,12 +311,12 @@ footer {
                     padding-bottom: 10px;
 
                     a {
-                        color: #eee;
+                        color: $light;
                         text-decoration: none;
 
                         &:hover {
                             text-decoration: none;
-                            border-bottom:1px solid #eee;
+                            border-bottom:1px solid $light;
                         }
                     }
                 }
@@ -270,7 +340,9 @@ footer {
         input.email {
             border-radius: 0px;
             border: 0;
-            background-color: #eee;
+            background-color: $light;
+            width: 100%;
+            max-width: 350px;
 
             &:focus {
                 outline: 0;
@@ -278,14 +350,14 @@ footer {
         }
 
         .button {
-            background-color: #222725;
-            border: 1px solid #eee;
+            background-color: $dark;
+            border: 1px solid $light;
             border-radius: 0px;
-            color: #eee;
+            color: $light;
             line-height: 1;
 
             &:hover {
-                background-color: #222725;
+                background-color: $dark;
             }
 
             @media (max-width:1150px) {
@@ -306,21 +378,30 @@ h1 {
     margin: -55px auto 20px;
     display: inline-block;
     position: relative;
-}
 
-h1::before {
-    left: 0;
-    width: 0px;
-    height: 10px;
-    background-color: #222725;
-    content: '';
-    position: absolute;
-    margin-top: 38px;
-    transition: width 0.5s ease;
-}
+    @media (max-width:$medium-breakpoint) {
+        font-size: 60px;
+    }
 
-h1.active::before {
-    width: 100%;
+    &::before {
+        left: 0;
+        width: 0px;
+        height: 10px;
+        background-color: $dark;
+        content: '';
+        position: absolute;
+        margin-top: 38px;
+        transition: width 0.5s ease;
+
+        @media (max-width:$medium-breakpoint) {
+            margin-top: 32px;
+            height: 8px;
+        }
+    }
+
+    &.active::before {
+        width: 100%;
+    }
 }
 
 p {
@@ -328,16 +409,20 @@ p {
     padding-bottom: 20px;
     font-size: 21px;
     text-align: left;
+
+    @media (max-width:$medium-breakpoint) {
+        font-size: 19px;
+    }
 }
 
 a {
-    color: #222725;
+    color: $dark;
     text-decoration: none;
-    border-bottom:1px solid #222725;
+    border-bottom:1px solid $dark;
 
     &:hover {
         text-decoration: none;
-        color: #ec1c24;
+        color: $highlight;
     }
 }
 
