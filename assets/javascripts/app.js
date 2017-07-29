@@ -4,6 +4,17 @@
 $(window).on('load', function() {
 
     //================================================//
+    // Find out browser and adjust CSS
+    //================================================//
+    function browserSniff() {
+        if (navigator.platform === 'iPhone' || navigator.platform === 'iPad'
+        || navigator.platform === 'Macintosh' || navigator.platform === 'MacIntel'
+        || navigator.platform === 'MacPPC' || navigator.platform === 'Mac68K') {
+            $('.strike').addClass('mac');
+        }
+    }
+
+    //================================================//
     // Fade out blanket
     //================================================//
 
@@ -61,5 +72,7 @@ $(window).on('load', function() {
     $('a').smoothScroll({speed: 1000});
     blanketFade();
     strikeOut();
+    browserSniff();
+    console.log(navigator.platform);
 
 });
