@@ -258,6 +258,11 @@ footer {
     padding: 50px 0;
     margin-top: 100px;
 
+    @media (max-width:$xsmall-breakpoint) {
+        padding-bottom: 20px;
+    }
+
+
     .footer-wrapper {
         display: flex;
         width: 80%;
@@ -268,10 +273,21 @@ footer {
             width: 100%;
             margin: 50px 0;
             border-color: $light!important;
+
+            @media (max-width:$xsmall-breakpoint) {
+                width: 200px;
+                margin: 20px auto;
+                border: none;
+            }
         }
 
         .column {
             width: 50%;
+
+            @media (max-width:$xsmall-breakpoint) {
+                width: 100%;
+                text-align: center;
+            }
 
             &.three {
                 width: 100%;
@@ -287,6 +303,10 @@ footer {
                     max-width: 50px;
                     margin: auto;
                     display: inline-block;
+
+                    @media (max-width:$xsmall-breakpoint) {
+                        max-width: 35px;
+                    }
 
                     &:first-of-type {
                         padding-right: 10px;
@@ -331,6 +351,11 @@ footer {
             @media (max-width:1150px) {
                 padding-top: 0;
             }
+
+            @media (max-width:$xsmall-breakpoint) {
+                text-align: center;
+                padding-top: 30px;
+            }
         }
 
         label {
@@ -355,6 +380,11 @@ footer {
             border-radius: 0px;
             color: $light;
             line-height: 1;
+            -webkit-appearance: none;
+
+            @media (max-width:$xsmall-breakpoint) {
+                width: 200px;
+            }
 
             &:hover {
                 background-color: $dark;
