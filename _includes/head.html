@@ -11,6 +11,8 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Humans -->
+    <link type="text/plain" rel="author" href="humans.txt" />
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ "/assets/images/favicon/apple-icon-57x57.png" | relative_url }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ "/assets/images/favicon/apple-icon-60x60.png" | relative_url }}">
@@ -31,9 +33,6 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    {% if jekyll.environment == 'production' and site.google_analytics %}
-    {% include google-analytics.html %}
-    {% endif %}
     <script type="text/javascript">
         (function() {
             var path = '//easy.myfonts.net/v2/js?sid=4445(font-family=Futura+Light)&sid=4446(font-family=Futura+Book)&sid=4448(font-family=Futura+Demi)&key=SgFwq1ySP2',
