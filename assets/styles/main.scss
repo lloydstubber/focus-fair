@@ -68,6 +68,77 @@ img {
     width: 100%;
 }
 
+/*==================== TYPOGRAPHY ====================*/
+
+h1 {
+    font-family: 'Futura-Dem', sans-serif;
+    text-align: center;
+    font-weight: normal;
+    font-size: 70px;
+    margin: -55px auto 20px;
+    display: inline-block;
+    position: relative;
+
+    &.strike.mac {
+        line-height: 1.2;
+    }
+
+    @media (max-width:$medium-breakpoint) {
+        font-size: 60px;
+    }
+
+    @media (max-width: $xsmall-breakpoint) {
+        font-size: 35px;
+    }
+
+    &::before {
+        left: 0;
+        width: 0px;
+        height: 10px;
+        background-color: $dark;
+        content: '';
+        position: absolute;
+        margin-top: 38px;
+        transition: width 0.5s ease;
+
+        @media (max-width:$medium-breakpoint) {
+            margin-top: 32px;
+            height: 8px;
+        }
+
+        @media (max-width: $xsmall-breakpoint) {
+            margin-top: 20px;
+            height: 3px;
+        }
+    }
+
+    &.active::before {
+        width: 100%;
+    }
+}
+
+p {
+    line-height: 1.4;
+    padding-bottom: 20px;
+    font-size: 21px;
+    text-align: left;
+
+    @media (max-width:$medium-breakpoint) {
+        font-size: 19px;
+    }
+}
+
+a {
+    color: $dark;
+    text-decoration: none;
+    border-bottom:1px solid $dark;
+
+    &:hover {
+        text-decoration: none;
+        color: $highlight;
+    }
+}
+
 /*==================== HERO ====================*/
 
 .hero-banner {
@@ -423,84 +494,7 @@ footer {
     }
 }
 
-
-/*==================== TYPOGRAPHY ====================*/
-
-h1 {
-    font-family: 'Futura Demi';
-    text-align: center;
-    font-weight: normal;
-    font-size: 70px;
-    margin: -55px auto 20px;
-    display: inline-block;
-    position: relative;
-
-    &.strike.mac {
-        line-height: 1.2;
-    }
-
-    @media (max-width:$medium-breakpoint) {
-        font-size: 60px;
-    }
-
-    @media (max-width: $xsmall-breakpoint) {
-        font-size: 35px;
-    }
-
-    &::before {
-        left: 0;
-        width: 0px;
-        height: 10px;
-        background-color: $dark;
-        content: '';
-        position: absolute;
-        margin-top: 38px;
-        transition: width 0.5s ease;
-
-        @media (max-width:$medium-breakpoint) {
-            margin-top: 32px;
-            height: 8px;
-        }
-
-        @media (max-width: $xsmall-breakpoint) {
-            margin-top: 20px;
-            height: 3px;
-        }
-    }
-
-    &.active::before {
-        width: 100%;
-    }
-}
-
-p {
-    line-height: 1.4;
-    padding-bottom: 20px;
-    font-size: 21px;
-    text-align: left;
-
-    @media (max-width:$medium-breakpoint) {
-        font-size: 19px;
-    }
-}
-
-a {
-    color: $dark;
-    text-decoration: none;
-    border-bottom:1px solid $dark;
-
-    &:hover {
-        text-decoration: none;
-        color: $highlight;
-    }
-}
-
 /*==================== MODIFIERS ====================*/
-
-#mfPreviewBar, div#mfPreviewBarShow,
-div#mfPreviewBarShow:hover {
-    display: none!important;
-}
 
 .clearfix {
     clear: both;
