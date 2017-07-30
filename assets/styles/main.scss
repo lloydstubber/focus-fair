@@ -54,6 +54,7 @@ $blanket: #fff100;
 $medium-breakpoint: 968px;
 $small-breakpoint: 650px;
 $xsmall-breakpoint: 580px;
+$xxsmall-breakpoint: 420px;
 
 /*================== ELEMENTS ==================*/
 
@@ -194,6 +195,10 @@ img {
         padding: 0 20px;
     }
 
+    @media (max-width:$xxsmall-breakpoint) {
+        padding: 0 10px;
+    }
+
     section {
         background-color: white;
         width: 100%;
@@ -205,6 +210,11 @@ img {
             margin: 150px auto 0;
         }
 
+        @media (max-width:$xxsmall-breakpoint) {
+            margin: 120px auto 0;
+        }
+
+
         .content-wrapper {
             padding: 0 60px 20px;
             z-index: 2;
@@ -212,6 +222,11 @@ img {
             @media (max-width:$small-breakpoint) {
                 padding: 0 40px 20px;
             }
+
+            @media (max-width:$xxsmall-breakpoint) {
+                padding: 0 20px 10px;
+            }
+
 
             ul {
                 text-align: left;
@@ -231,6 +246,12 @@ img {
                 @media (max-width:$xsmall-breakpoint) {
                     &:first-of-type, &:last-of-type {
                         margin: 0 0 15px 20px;
+                    }
+                }
+
+                @media (max-width:$xsmall-breakpoint) {
+                    &:first-of-type, &:last-of-type {
+                        margin: 0 0 15px 40px;
                     }
                 }
 
@@ -268,6 +289,9 @@ footer {
         padding-bottom: 30px;
     }
 
+    @media (max-width:$xsmall-breakpoint) {
+        font-size: 14px;
+    }
 
     .footer-wrapper {
         display: flex;
