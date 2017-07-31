@@ -205,6 +205,10 @@ a {
             left: 50%;
             transform: translateX(-50%);
         }
+
+        @media (max-width: $xxsmall-breakpoint) {
+            width: 275px;
+        }
     }
 
     .arrow-down {
