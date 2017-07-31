@@ -15,7 +15,8 @@ $(window).on('load', function() {
             navigator.platform === 'Android' ||
             navigator.platform === 'MacPPC' ||
             navigator.platform === 'null' ||
-            navigator.platform === 'Mac68K') {
+            navigator.platform === 'null' ||
+            navigator.platform === 'Linux armv8l') {
                 $('.strike').addClass('mac');
         }
     }
@@ -84,6 +85,5 @@ $(window).on('load', function() {
     strikeOut();
     browserSniff();
     console.log('Site by squareyes.info');
-    console.log(navigator.platform);
 
 });
