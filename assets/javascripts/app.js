@@ -15,7 +15,7 @@ $(window).on('load', function() {
             navigator.platform === 'Android' ||
             navigator.platform === 'MacPPC' ||
             navigator.platform === 'null' ||
-            navigator.platform === 'null' ||
+            navigator.platform === 'Linux armv7l' ||
             navigator.platform === 'Linux armv8l') {
                 $('.strike').addClass('mac');
         }
