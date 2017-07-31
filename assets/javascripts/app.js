@@ -11,7 +11,10 @@ $(window).on('load', function() {
             navigator.platform === 'iPad'   ||
             navigator.platform === 'Macintosh' ||
             navigator.platform === 'MacIntel'  ||
+            navigator.platform === 'Linux' ||
+            navigator.platform === 'Android' ||
             navigator.platform === 'MacPPC' ||
+            navigator.platform === 'null' ||
             navigator.platform === 'Mac68K') {
                 $('.strike').addClass('mac');
         }
