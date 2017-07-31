@@ -84,7 +84,6 @@ $(window).on('load', function() {
     blanketFade();
     strikeOut();
     browserSniff();
-    console.log(navigator.platform);
     console.log('Site by squareyes.info');
 
 });
