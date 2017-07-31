@@ -115,6 +115,36 @@ h1 {
     &.active::before {
         width: 100%;
     }
+
+    &.four {
+        margin-bottom: 30px;
+
+        &::before {
+            left: 0;
+            width: 0px;
+            height: 9px;
+            background-color: $dark;
+            content: '';
+            position: absolute;
+            margin-top: 69px;
+            transition: width 0.5s ease;
+
+            @media (max-width:$medium-breakpoint) {
+                margin-top: 59px;
+                height: 7px;
+            }
+
+            @media (max-width: $xsmall-breakpoint) {
+                margin-top: 35px;
+                height: 3px;
+            }
+        }
+
+        &.active::before {
+            width: 100%;
+        }
+
+    }
 }
 
 p {
