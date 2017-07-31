@@ -84,5 +84,6 @@ $(window).on('load', function() {
     strikeOut();
     browserSniff();
     console.log('Site by squareyes.info');
+    console.log(navigator.platform);
 
 });
